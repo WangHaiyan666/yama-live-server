@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: default
+  datasource:
+    url: jdbc:mysql://localhost:3306/yama?characterEncoding=UTF-8&serverTimezone=Asia/Tokyo
+    username: root
+    password:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+

@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: yama-live-api
+
+logging:
+  level:
+    com.newverse.yama.live.infrastructure.mapper: DEBUG
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    default-fetch-size: 1000
+    default-statement-timeout: 30
+
+
+
+

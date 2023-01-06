@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: docker
+  datasource:
+    url: #TODO
+    username: #TODO
+    password: #TODO
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+

@@ -1,0 +1,4 @@
+rootProject.name = 'yama-live-server'
+include 'yama-live-api'
+include 'yama-live-domain'
+include 'yama-live-infrastructure'
