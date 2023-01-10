@@ -17,6 +17,12 @@ dependencies {
     //test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.boot:spring-boot-test-autoconfigure'
+
+    // https://mvnrepository.com/artifact/software.amazon.awssdk/s3
+    testImplementation group: 'software.amazon.awssdk', name: 's3', version: '2.16.60'
+
+// https://mvnrepository.com/artifact/software.amazon.awssdk/bom
+    runtimeOnly group: 'software.amazon.awssdk', name: 'bom', version: '2.19.12', ext: 'pom'
 }
 
 bootJar {

@@ -4,7 +4,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/yama?characterEncoding=UTF-8&serverTimezone=Asia/Tokyo
     username: root
-    password:
+    password: 1234
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
 

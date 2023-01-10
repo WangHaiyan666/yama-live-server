@@ -1,5 +1,15 @@
 apply plugin: 'org.springframework.boot'
 
+allprojects {
+    repositories {
+        maven {
+            url 'https://maven.aliyun.com/repository/public/'
+        }
+        mavenLocal()
+        mavenCentral()
+    }
+}
+
 dependencies {
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 
@@ -8,6 +18,14 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter'
+    // https://mvnrepository.com/artifact/com.google.firebase/firebase-admin
+    implementation group: 'com.google.firebase', name: 'firebase-admin', version: '9.1.1'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '2.6.4'
+    // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-impl
+    implementation group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.1'
 
     //lombok
     compileOnly 'org.projectlombok:lombok'
@@ -15,9 +33,30 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
 
+    //swagger
+    implementation 'io.springfox:springfox-swagger2'
+    implementation 'io.springfox:springfox-swagger-ui'
+    implementation 'io.springfox:springfox-core'
+
     //test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.boot:spring-boot-test-autoconfigure'
+
+    implementation group: 'com.google.api-client', name: 'google-api-client', version: '1.31.5'
+
+    implementation group: 'com.baomidou', name: 'mybatis-plus-boot-starter', version: '3.5.2'
+
+    /*// https://mvnrepository.com/artifact/software.amazon.awssdk/bom
+    implementation group: 'software.amazon.awssdk', name: 'bom', version: '2.16.60'*/
+
+    // https://mvnrepository.com/artifact/software.amazon.awssdk/s3
+    implementation group: 'software.amazon.awssdk', name: 's3', version: '2.16.60'
+
+    // https://mvnrepository.com/artifact/software.amazon.awssdk/bom
+    runtimeOnly group: 'software.amazon.awssdk', name: 'bom', version: '2.19.12', ext: 'pom'
+
+    // https://mvnrepository.com/artifact/org.springframework.data/spring-data-redis
+    implementation group: 'org.springframework.data', name: 'spring-data-redis', version: '2.6.4'
 }
 
 bootJar {
